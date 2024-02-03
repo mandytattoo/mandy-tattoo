@@ -8,7 +8,6 @@ import { Navbar } from '@/components/navbar'
 import { cn } from '@/lib/utils'
 
 import { Faq } from './faq'
-import { Location } from './location'
 import { Slider } from './slider'
 
 import backgroundImage from '@/assets/home-background.png'
@@ -39,24 +38,6 @@ export default function Home() {
         <FAQ />
       </main>
 
-      <footer className="flex flex-col gap-10 px-4 pb-10 md:gap-16 md:px-16 lg:gap-20">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-            Nossa <span className="text-secondary">localização</span>
-          </h2>
-          <p className="text-lg xl:text-xl 2xl:text-2xl">
-            O estúdio Mandy Tattoo é privativo, com atendimento somente com hora
-            marcada. Conta com um espaço aconchegante, organizado e limpo,
-            prezando sempre pelo seu conforto.
-          </p>
-          <p className="text-lg xl:text-xl 2xl:text-2xl">
-            É de fácil acesso via transporte público, ficando ao lado da estação
-            de metrô Águas Claras e próximo ao ponto de ônibus. Caso deseje vir
-            de carro, há a opção de estacionamento privado.
-          </p>
-        </div>
-        <Location />
-      </footer>
       <Image
         className="max-h-10 w-full"
         src={divisorImage}
@@ -158,11 +139,11 @@ function Indication({ posX, posY, text }: IndicationProps) {
 
 function Info() {
   return (
-    <section className="-mt-[10rem] flex flex-col gap-16 md:-mt-[14rem] lg:-mt-[28rem]">
+    <section className="-mt-[8rem] flex flex-col gap-16 pt-[2rem] md:-mt-[14rem] lg:-mt-[28rem]">
       <Indication
         posX="right"
         posY="bot"
-        text="Especialista em tatuagens de anime e temática oriental"
+        text="Especialista em tatuagens de anime, mangá e fineline"
       />
       <Indication
         posX="left"
@@ -172,11 +153,6 @@ function Info() {
       <Indication
         posX="right"
         posY="top"
-        text="Estúdio privado pensado para o seu conforto"
-      />
-      <Indication
-        posX="left"
-        posY="bot"
         text="Utilização de técnicas modernas e dos melhores materiais disponíveis no mercado"
       />
     </section>
@@ -242,12 +218,6 @@ function Bio() {
             Para mim, cada pessoa é única, e cada tatuagem também deve ser. Todo
             trabalho é uma oportunidade de criar algo exclusivo, pensado e
             desenhado especificamente para cada cliente.
-          </p>
-          <p>
-            Atualmente, eu também dedico parte do meu tempo ensinando técnicas
-            modernas de tatuagem em cursos e mentorias. Meu objetivo? Formar
-            tatuadores profissionais e qualificados, garantindo que nossa
-            profissão esteja em boas mãos.
           </p>
         </div>
         <Button

@@ -13,8 +13,6 @@ type NavbarProps = {
 const routes = [
   { path: '/', name: 'Home' },
   { path: '/#orcamentos', name: 'Orçamentos' },
-  { path: '/mentoria', name: 'Mentoria' },
-  { path: '/curso', name: 'Curso' },
 ] as const
 
 export function Navbar({ children }: NavbarProps) {
@@ -27,9 +25,12 @@ export function Navbar({ children }: NavbarProps) {
           <li key={path}>
             <Button
               asChild
-              className={cn('hover:bg-primary text-[0.7rem] sm:text-[0.9rem] md:text-[1.2rem] 2xl:text-[1.3rem]', {
-                'underline underline-offset-8': path === pathname,
-              })}
+              className={cn(
+                'text-[0.7rem] hover:bg-primary sm:text-[0.9rem] md:text-[1.2rem] 2xl:text-[1.3rem]',
+                {
+                  'underline underline-offset-8': path === pathname,
+                },
+              )}
               variant="ghost"
             >
               <Link href={path}>{name}</Link>
